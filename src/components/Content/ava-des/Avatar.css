@@ -1,0 +1,23 @@
+.Descriptios{
+    grid-area: D;
+}
+
+.Descriptios h3 {
+    margin-bottom: 5px;
+}
+
+.Avatar {
+    display: grid;
+    grid-template-areas:
+    "A D";
+    grid-auto-columns: 1fr 11fr;
+    display: inline-grid;
+    grid-gap: 10px;
+}
+
+.Avatar img {
+    width: 100px;
+    border-radius: 100px;
+    margin: 0px;
+    grid-area: A;
+}

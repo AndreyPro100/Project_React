@@ -1,0 +1,22 @@
+.app-wrapper {
+  display: grid;
+  grid-template-areas:
+    "h h"
+    "n c";
+  grid-template-rows: 60px 1fr;
+  grid-auto-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+
+.content-wrapper{
+  grid-area: c;
+  background-color: grey;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.dialog a {
+  color: #fff;
+  text-decoration: none;
+}
+

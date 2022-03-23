@@ -1,0 +1,10 @@
+.Imgcont {
+    text-align: center;
+    height: 50%;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
