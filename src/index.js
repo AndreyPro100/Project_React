@@ -19,6 +19,7 @@ let dialogsData = [
     {id: 2, name: 'Andrey'},
     {id: 3, name: 'Kolya'},
     {id: 4, name: 'Kirya'},
+    {id: 5, name: 'Monte Blank'},
 ];
 
 
