@@ -5,16 +5,18 @@ import {NavLink} from "react-router-dom";
 let Dialog = (props) => {
     return (
         <div className='dialog'>
-            <NavLink to={"/Dialog/" + props.id}>{props.name}</NavLink>
+            <NavLink to={"/Dialog/" + props.id}>{props.name}</NavLink> {/*Получаем массив с людьми*/}
         </div>
     )
 };
 
+
 let Message = (props) => {
     return (
-        <div className='dialog'>{props.message}</div>
+        <div className='dialog'>{props.message}</div>  /*Получаем массив с диалогами*/
     )
 };
+
 
 let Dialogs = (props) => {
 

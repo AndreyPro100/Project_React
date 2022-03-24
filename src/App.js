@@ -16,8 +16,8 @@ const App = (props) => {
                 <div className='content-wrapper'>
                     <Routes>
                         <Route exact path="/Dialog"
-                               element={<Dialogs messageData={props.messageData} dialogsData={props.dialogsData}/>}/>
-                        <Route path="/Content" element={<Content postData={props.postData}/>}/>
+                               element={<Dialogs messageData={props.message} dialogsData={props.dialog}/>}/>
+                        <Route path="/Content" element={<Content postData={props.post}/>}/>
                     </Routes>
                 </div>
             </div>
