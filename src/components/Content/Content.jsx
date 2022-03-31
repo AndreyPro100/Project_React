@@ -11,7 +11,7 @@ let Content = (props) => {
             <Imgcont/>
             <Avatar/>
             <CreatePost/>
-            <Post postData={props.postData}/>
+            <Post posts={props.state2}/>
         </div>
     );
 }

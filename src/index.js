@@ -6,6 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import state from "./components/Redux/state";
 
 
-ReactDOM.render(<App post={state.postData} message={state.messageData} dialog={state.dialogsData}/>, document.getElementById('root'));
-
+/*ReactDOM.render(<App post={state.postData} message={state.messageData} dialog={state.dialogsData}/>, document.getElementById('root'));*/
+ReactDOM.render(<App appstate = {state}/>, document.getElementById('root'));
 reportWebVitals();
