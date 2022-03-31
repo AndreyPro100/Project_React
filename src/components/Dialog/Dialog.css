@@ -10,3 +10,15 @@
 .dialogItems .active {
     color: #c70000;
 }
+
+.dialog {
+    margin-bottom: 50px;
+
+}
+
+.dialog img {
+    margin-right: 10px;
+    width: 50px;
+    border-radius: 100px;
+    height: 50px;
+}

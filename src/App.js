@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Content from "./components/Content/Content";
 import Dialogs from "./components/Dialog/Dialog";
 
-
 const App = (props) => {
     return (
         <BrowserRouter>
@@ -16,8 +15,8 @@ const App = (props) => {
                 <div className='content-wrapper'>
                     <Routes>
                         <Route exact path="/Dialog"
-                               element={<Dialogs messages={props.appstate.messageData} dialogs={props.appstate.dialogsData}/>}/>
-                        <Route path="/Content" element={<Content state2={props.appstate.postData}/>}/>
+                               element={<Dialogs state={props.state.dialogsPage}/>}/>
+                        <Route path="/Content" element={<Content state={props.state.contentPage}/>}/>
                     </Routes>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Nav.css';
 import { NavLink } from "react-router-dom";
+import Friends from "./Friends/Friends"
+
 
 const setActive = ({isActive}) => isActive ? 'active-link' : '';
 
@@ -13,6 +15,7 @@ let Navbar = () => {
             <div className="item" activeClassName="activelink">
                 <NavLink to="/Dialog" style={({isActive}) => ({color: isActive ? '#c70000' : '#fff'})}>Message</NavLink>
             </div>
+            <Friends/>
         </nav>
     );
 }
