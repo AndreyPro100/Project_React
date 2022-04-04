@@ -10,7 +10,7 @@ let Content = (props) => {
         <div>
             <Imgcont/>
             <Avatar/>
-            <CreatePost/>
+            <CreatePost addPost={props.addPost} state={props.state} updateNewPostText = {props.updateNewPostText}/>
             <Post state={props.state}/>
         </div>
     );

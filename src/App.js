@@ -14,9 +14,8 @@ const App = (props) => {
                 <Navbar/>
                 <div className='content-wrapper'>
                     <Routes>
-                        <Route exact path="/Dialog"
-                               element={<Dialogs state={props.state.dialogsPage}/>}/>
-                        <Route path="/Content" element={<Content state={props.state.contentPage}/>}/>
+                        <Route exact path="/Dialog" element={<Dialogs state={props.state.dialogsPage}/>}/>
+                        <Route path="/Content" element={<Content addPost = {props.addPost} state={props.state.contentPage} updateNewPostText = {props.updateNewPostText}/>}/>
                     </Routes>
                 </div>
             </div>

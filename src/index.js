@@ -1,10 +1,17 @@
+import state from './components/Redux/state';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state from "./components/Redux/state";
+import {addPost} from "./components/Redux/state"
+import {updateNewPostText} from './components/Redux/state'
+import {subscribe} from './components/Redux/state'
 
-/*ReactDOM.render(<App post={state.postData} message={state.messageData} dialog={state.dialogsData}/>, document.getElementById('root'));*/
-ReactDOM.render(<App state = {state}/>, document.getElementById('root'));
-reportWebVitals();
+let renderEntireTree = (state) => {
+    ReactDOM.render(<App state={state} addPost={addPost} updateNewPostText={updateNewPostText}/>, document.getElementById('root'));
+}
+
+renderEntireTree(state);
+
+subscribe(renderEntireTree);
