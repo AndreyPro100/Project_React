@@ -1,17 +1,18 @@
 import React from "react";
-import './Create-post.css'
+import './Create-post.css';
+import {addPostActionCreator, CreatePostActionCreator} from './../../Redux/state'
 
 let CreatePost = (props) => {
     let newPostElement = React.createRef(); //Переменная которая будет отслеживать хтмл элемент
 
     let onPostChange = () => {
         let newText = newPostElement.current.value;
-        props.updateNewPostText(newText);
+        props.dispatch(CreatePostActionCreator(newText));
         /*console.log(newText);  - Вывод в консоль то что сейчас в инпуте*/
     };
 
     let addPost = () => {
-        props.addPost();
+        props.dispatch(addPostActionCreator());
     };
 
 
