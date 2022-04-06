@@ -1,6 +1,6 @@
 import React from "react";
 import './Create-post.css';
-import {addPostActionCreator, CreatePostActionCreator} from './../../Redux/state'
+import {addPostActionCreator, CreatePostActionCreator} from './../../Redux/content-reducer'
 
 let CreatePost = (props) => {
     let newPostElement = React.createRef(); //Переменная которая будет отслеживать хтмл элемент

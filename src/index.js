@@ -6,7 +6,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 let renderEntireTree = (state) => {
-    ReactDOM.render(<App state={store.getState()} dispatch={store.dispatch.bind(store)}/>, document.getElementById('root'));
+    ReactDOM.render(<App state={store.getState()}
+                         dispatch={store.dispatch.bind(store)}/>, document.getElementById('root'));
 }
 
 renderEntireTree(store.getState());

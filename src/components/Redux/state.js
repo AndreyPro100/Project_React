@@ -1,5 +1,5 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+import contentReducer from "./content-reducer";
+import dialogsReducer from "./dialogs-reducer";
 
 let store = {
     state: {
@@ -41,6 +41,7 @@ let store = {
                     avatar: 'https://i.pinimg.com/originals/79/27/cc/7927cc1fd76b5db6de6141fecbe2c953.jpg'
                 },
             ],
+            newMessageText: '',
         },
     },
     renderEntireTree() {
@@ -55,35 +56,16 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            let newPost = {
-                id: 5,
-                message: this.state.contentPage.newPostText,
-                tasks: 'My first push in this object'
-            };
 
-            this.state.contentPage.posts.push(newPost);
-            this.state.contentPage.newPostText = ''; /* - Оставляет пустую строку после отправки текста*/
-            this.state.renderEntireTree(this.state);
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this.state.contentPage.newPostText = action.newText;
-            this.state.renderEntireTree(this.state);
-        }
+        this.state.contentPage = contentReducer(this.state.contentPage, action);
+        this.state.dialogsPage = dialogsReducer(this.state.dialogsPage, action);
+        this.state.renderEntireTree(this.state);
+
     },
 }
 
-export const addPostActionCreator = () => {
-    return {
-        type: ADD_POST
-    }
-};
 
-export const CreatePostActionCreator = (newText) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT,
-        newText: newText
-    }
-};
+
 
 window.store = store; /*- Для того, чтобы в консоли смотреть, что у нас обновилось*/
 
