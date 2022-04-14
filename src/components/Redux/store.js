@@ -56,16 +56,11 @@ let store = {
     },
 
     dispatch(action) {
-
         this.state.contentPage = contentReducer(this.state.contentPage, action);
         this.state.dialogsPage = dialogsReducer(this.state.dialogsPage, action);
         this.state.renderEntireTree(this.state);
-
     },
 }
-
-
-
 
 window.store = store; /*- Для того, чтобы в консоли смотреть, что у нас обновилось*/
 

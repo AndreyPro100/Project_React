@@ -1,7 +1,17 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-const contentReducer = (state, action) => {
+let initialState = {
+    posts: [
+        {id: 1, message: 'Hello world', tasks: 'My phone 428573498579'},
+        {id: 2, message: 'Hi bitch', tasks: 'fuck you'},
+        {id: 3, message: 'Hi bitch1', tasks: 'fuck you1'},
+        {id: 4, message: 'Hi bitch2', tasks: 'fuck you2'},
+    ],
+    newPostText: 'Yelabuga_st',
+};
+
+const contentReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case ADD_POST:
